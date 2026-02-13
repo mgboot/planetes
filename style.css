@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    background: #000;
+    font-family: 'Courier New', monospace;
+    color: #0f0;
+}
+
+#game-canvas {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+}
+
+#hud {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+#hud-top-left {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font-size: 14px;
+    line-height: 1.6;
+    text-shadow: 0 0 6px #0f0;
+}
+
+#gravity-table {
+    margin-top: 4px;
+    border-collapse: collapse;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+#gravity-table td {
+    padding: 1px 8px 1px 0;
+    white-space: nowrap;
+}
+
+#gravity-table .body-name {
+    min-width: 80px;
+}
+
+#gravity-table .body-dist {
+    opacity: 0.75;
+    min-width: 90px;
+}
+
+#gravity-table .body-grav {
+    opacity: 0.75;
+}
+
+#hud-top-right {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 14px;
+    text-align: right;
+    text-shadow: 0 0 6px #0f0;
+}
+
+#hud-top-right label {
+    pointer-events: auto;
+}
+
+#hud-top-right input[type="range"] {
+    width: 120px;
+    margin-top: 4px;
+    accent-color: #0f0;
+}
+
+#hud-bottom {
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.7;
+    text-shadow: 0 0 4px #0f0;
+}
+
+#loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #0f0;
+    text-shadow: 0 0 10px #0f0;
+    z-index: 100;
+}
+
+#loading.hidden {
+    display: none;
+}
+
+/* Crosshair */
+#game-canvas {
+    cursor: crosshair;
+}

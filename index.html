@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planetes — Solar System Gravity Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="game-canvas"></canvas>
+    <div id="hud">
+        <div id="hud-top-left">
+            <div id="speed-display">Speed: 0 km/s</div>
+            <div id="total-gravity-display">Net gravity: 0 m/s²</div>
+            <div id="gravity-table-title" style="margin-top:8px; opacity:0.7; font-size:12px;">── Strongest pulls ──</div>
+            <table id="gravity-table">
+                <tbody></tbody>
+            </table>
+        </div>
+        <div id="hud-top-right">
+            <div id="time-warp-display">Time: 1×</div>
+            <label>
+                <input type="range" id="time-warp-slider" min="0" max="7" step="1" value="0">
+            </label>
+        </div>
+        <div id="hud-bottom">
+            <div id="controls-help">
+                <strong>Controls:</strong>
+                W/S — Thrust forward/backward &nbsp;|&nbsp;
+                A/D — Yaw left/right &nbsp;|&nbsp;
+                Q/E — Roll left/right &nbsp;|&nbsp;
+                Shift/Space — Pitch down/up &nbsp;|&nbsp;
+                C — Toggle camera &nbsp;|&nbsp;
+                Scroll — Zoom
+            </div>
+        </div>
+    </div>
+    <div id="loading">Loading solar system…</div>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
